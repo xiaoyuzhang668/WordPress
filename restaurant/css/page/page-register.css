@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    background-color: rgba( 40, 167, 69, 1);
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+		z-index: 100000;
+    left: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, rgba(252, 108, 63, 1) 0%, rgba( 40, 167, 69, 1) 100%);
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+		background: linear-gradient(180deg, rgba( 40, 167, 69, 0.9) 0%, rgba( 40, 167, 69, 0.1) 100%);
+}
+.dropdown-menu.show {
+    background-color: rgba( 40, 167, 69, 0.9);
+		padding:0;
+}
+.dropdown-menu.show li {
+    padding: 0;
+		padding-right: 0;
+		background-color: rgba( 40, 167, 69, 0.9);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+		color: #fff;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.5);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.5);
+}
+.bg-orange {
+	background-color: rgba(252, 108, 63, 0.5);
+}
+.bg-purple {
+	background-color: rgba( 40, 167, 69, 0.9);
+}
+.text-purple {
+	color: rgba( 40, 167, 69, 0.9)!important;
+}
+@media screen and (max-width: 992px) {
+	.registration-container {
+		width: 100%;
+	}
+} 
+select:hover,
+input:hover {
+	border: 2px solid #673ab7;
+}
+
+input#register-submit-btn:hover {
+	background-color: #673ab7;
+	color: #fff!important;
+}
+.registration-success:hover a {
+	color: rgba( 40, 167, 69, 0.9);
+	font-weight: 900;
+}
+.sticky-top {
+  position: fixed;
+  top: 0;
+}
+.lan {
+	position: fixed;
+	top: 0;
+	z-index: 10000;
+}

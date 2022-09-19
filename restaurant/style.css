@@ -1,0 +1,1017 @@
+/*
+Theme Name: Cathy Zhang Theme
+Theme URI: https://restaurant.cathy-zhang.ca
+Author: Cathy Zhang
+Author URI: https://cathy-zhang.ca
+Description: Cathy Zhang Personal Portfolio. This is a build from scrath theme.  Casual blog template. 
+Version: 1.0.0
+Tags: china, sidebar, clean, travel, blog, responsive, two-columns, featured-image, custom-menu, custom-header, custom-footer, post-formats, sceenshot.png , size is 1200X900px.
+*/
+
+/*========================================
+1. Font Family - google-webfonts-helper
+========================================*/
+/* playfair-display-regular - latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../restaurant/assets/fonts/playfair-display-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-regular.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../restaurant/assets/fonts/playfair-display-v20-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../restaurant/assets/fonts/playfair-display-v20-latin-700.svg#PlayfairDisplay') format('svg'); /* Legacy iOS */
+}
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../restaurant/assets/fonts/roboto-condensed-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../restaurant/assets/fonts/roboto-condensed-v18-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../restaurant/assets/fonts/roboto-condensed-v18-latin-700.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+/*========================================
+2. Common setting
+========================================*/
+* {
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+/*set font type for all pages*/
+body,
+.woocommerce {
+  font-family: 'Roboto Condensed', 'Arial',sans-serif;
+  color: #2c3e50;
+  background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    font-family: 'Playfair Display', Georgia, serif;
+    text-shadow:  0px 1px 3px rgba(0, 0, 0, 0.2), 
+                  0px 1px 1px rgba(0, 0, 0, 0.1),
+                  0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a, 
+a:visited, 
+a:link {
+	color: rgba(0,0,0,1);
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+a:hover, 
+a:focus, 
+a:active, 
+a.moretag:active, 
+a.moretag:hover, 
+a.moretag:focus {
+	text-decoration: none;
+	color: rgba(0,0,0,0.5);
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.text-green {
+    color: #89da59;
+}
+.bg-green {
+	background-color: #89da59;
+}
+button.is-checked {
+	background-color: #89da59!important;
+}
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button{
+    background-color: #89da59!important;
+}
+.btn-green {
+	background-color: #89da59!important;
+}
+.btn-green:hover {
+	background-color: #000!important;
+	font-weight: 600;
+	color: #fff!important;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.reply:hover a#comment-reply-link,
+.btn-green:hover a {
+	font-weight: 600;
+	color: #fff!important;
+}
+.clear {
+	clear: both;
+}
+.trans-500 {
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+/*height*/
+.minHeight200 {
+  min-height: 200px;
+	width: auto;
+}
+.minHeight {
+	min-height: 320px;
+	width: auto;
+}
+.maxHeight {
+	max-height: 320px;
+	width: auto;
+}
+.maxCarouselHeight {
+	max-height: 620px;
+	width: auto;
+}
+.maxHeight60 {
+	max-height: 60px;
+	width: auto;
+}
+.height {
+	height: 320px;
+}
+/*on focus to clear placeholder*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+textarea:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+textarea:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+/*======================================
+hamburger menu icon animation
+========================================*/
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/*set navigation toggle bar link hover behaviour*/
+.navbar-toggler:hover {
+		background-color: rgba(252, 108, 63, 0.7)!important;
+    color: #fff!important;
+		font-weight: 900;
+		-webkit-transition: all 400ms ease;
+		-moz-transition: all 400ms ease;
+		-ms-transition: all 400ms ease;
+		-o-transition: all 400ms ease;
+		transition: all 400ms ease;
+}
+.navbar-toggler:hover .bar1, 
+.navbar-toggler:hover .bar2, 
+.navbar-toggler:hover .bar3{
+		background-color: #fff;
+		-webkit-transition: all 400ms ease;
+		-moz-transition: all 400ms ease;
+		-ms-transition: all 400ms ease;
+		-o-transition: all 400ms ease;
+		transition: all 400ms ease;
+}
+/*======================================
+hoverable drop down menu
+========================================*/
+.menu-item {
+  position: relative;
+  display: block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: pink;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-menu a:hover {
+	background-color: black;
+	color: white;
+	width: 100%;	
+}
+.dropdown-menu a:hover li {
+	width: 100%;
+}
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+/*======================================
+current menu
+========================================*/
+#navbar li.current-menu-parent > a.nav-link, 
+#navbar li.current-menu-item > a.nav-link,
+#navbar li.current-page-ancestor > a.nav-link,
+#navbar li.current-menu-ancestor > a.nav-link {
+    color:#fff;
+    background-color: rgba(252, 108, 63, 0.7);
+	  border-radius: 6px;
+		border-top: 4px solid yellow;
+		border-bottom: 4px solid yellow;
+}
+/*active dropdown - active and current second level drop-down */
+#navbar li.current_page_item > a.dropdown-item, 
+#navbar li.current_page_ancestor > a.dropdown-item,
+#navbar ul.dropdown-menu .active> a,
+#navbar li.current_page_ancestor > a.nav-link {
+	background-color: #89da59;
+	color: #fff;
+	border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff; 
+}
+/*hover effect*/
+#navbar a.nav-link:hover,
+#menu-product a.nav-link:hover {
+	background-color: #89da59;
+	color: rgba(255,255,255,1);
+	border-radius: 6px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;	
+}
+#navbar a:hover,
+#navbar a:active {
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff; 
+	display: block;
+}
+/* ==========================================
+   9. front-page.php
+========================================== */
+#video_player {
+	display: table;
+	line-height: 0;
+	font-size: 0;
+	background-color: #000;
+}
+#video_player video,
+#video_player figcaption {
+	display: table-cell;
+	vertical-align: top;
+}
+#video_player figcaption {
+	width: 25%;
+	padding: 0;
+	margin: 0;
+	color: transparent;
+}
+#video_player figcaption a {
+	display: block;
+	opacity: .5;
+	transition: 1s opacity;
+}
+#video_player figcaption a:hover, 
+#video_player figcaption a.active {
+	opacity: 1;
+}
+@media (max-width: 992px) {
+	#video_player video,
+	#video_player figcaption {
+	display: table-row;			
+	}
+	#video_player figcaption a {
+		display: inline-block;
+		width: 33.33%;
+		border-top: 5px solid white;
+	}
+	#myVideoFrontPage {
+		position: relative;
+	}
+}
+#video_player figcaption {
+	border-left: 5px solid white;
+}
+#video_player {
+	position: relative;
+}
+@media (min-width: 992px) {
+	#myVideoFrontPage {
+		min-height: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 75%;
+	}
+}
+.btn-green2 {
+	background-color: #89da59;
+	width: 50%;
+}
+.btn-green2:hover {
+	background-color: #000;
+	font-weight: 600;
+	color: #fff;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+#video_player .carousel-caption {
+	left: 7%;
+	right: auto;
+	width: 300px;
+	height: auto;
+	top: 5%;
+	border-radius: 18px;
+	color: #f1f1f1;
+}
+#video_player .carousel-caption .card {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.maxCarouselHeight {
+	max-height: 460px;
+}
+/*==================================
+3. go to top button
+========================================*/
+.myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  background-color: #28a745; /* Set a background color */
+  color: rgba(255, 255, 255, 1); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+.myBtn:hover {
+  background-color: #BED6B2; /* Add a dark-grey background on hover */
+  color: #5d661b;
+  font-weight: bold;
+  -webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+/*======================================
+4.  HR Styles all types
+========================================*/
+/* Gradient transparent - color - transparent */
+hr.style2 {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/*light gray dash*/
+hr.style3 {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+/*light gray solid*/
+hr.style6 {
+    border: 0;
+    height: 0;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.3);
+}
+/*symbol in the middle*/
+hr.style8 {
+    overflow: visible;  
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style8:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+/* Flaired edges, */
+hr.style10 {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style10:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+/*symbol in the middle gree leaf and blue line*/
+hr.style15 {
+	border-top: 4px double blue;
+	text-align: center;
+}
+hr.style15:after {
+	font-family: 'Font Awesome 5 Brands';
+  content: "\f18c";
+	display: inline-block;
+	position: relative;
+	top: -15px;
+	padding: 0 10px;
+	background-color: #fff;
+	color: rgb(137, 218, 89);
+	font-size: 25px;
+}
+/*======================================
+loaders - all pages
+========================================*/
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('assets/image/loader/pageLoader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+/*======================================
+Plugin - lightbox
+========================================*/
+.lb-dataContainer .lb-data .lb-details span.lb-caption {
+  font-size: 1.5em;
+  font-family: 'PT Serif', 'Times New Roman', serif;
+}
+.lb-data .lb-number {
+	padding-top: 8px;
+	font-size: 1.1em;
+  font-family: 'Poppins', 'Arial', sans-serif;
+}
+/*
+span.lb-number, a.lb-next, a.lb-prev {
+	display: none!important;
+}
+*/
+/*======================================
+Plug in - contact form 7
+========================================*/
+.wpcf7-spam-blocked {
+     background-color: #e2e2e2;     
+     color: #383838;
+} 
+.wpcf7-not-valid-tip {
+     font-weight: bold;    
+     color: red;
+} 
+.wpcf7-mail-sent-ok {
+	 border-radius: 5px;
+	 background-color: #dff0d8;
+	 border: 1px solid #3c763d !important;
+	 color: #3c763d;
+	 display: inline-block;
+	 padding: 6px;
+}
+.wpcf7-form-control {
+	width: 100%!important;
+	padding: 6px;
+	border-bottom: 1px #000 solid;
+	border-radius: 5px;
+}
+input.wpcf7-form-control:focus, 
+textarea.wpcf7-form-control:focus, 
+input.wpcf7-form-control:hover, 
+textarea.wpcf7-form-control:hover {
+	border-bottom: green solid 3px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+/*
+.wpcf7-validation-errors, 
+.wpcf7-validation-missing {
+   background-color: transparent;
+}
+*/
+.screen-reader-response {
+	display: none;
+}
+/*======================================
+Plugin - translate press 
+========================================*/
+.translatepress-en_US .tp_en, 
+.translatepress-zh_CN .tp_cn { 
+	display: none; 
+}
+/*======================================
+Plugin - wp pagenavi
+========================================*/
+.wp-pagenavi {
+  	clear: both;
+}
+div.wp-pagenavi  {
+    margin: 3em 0;
+}
+div.wp-pagenavi-navigation {
+	padding: 0px 0px 10px 0px;
+}
+.wp-pagenavi {
+	z-index: 100;
+}
+.wp-pagenavi a, 
+.wp-pagenavi span {
+    font-size: 1em; 
+    color: #03719c; 
+    text-decoration: none;
+    border: 3px solid #ccc; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px;
+    padding: 10px!important;
+    margin: 3px!important;
+}
+.wp-pagenavi a:hover, 
+.wp-pagenavi span.current {
+    background: #28a745;
+    color: #fff;
+    border: 3px solid #AFAFAF;
+}
+.wp-pagenavi span.current { 
+    font-weight: bold; 
+}
+/*display when mobile*/
+@media screen and (max-width: 576px) {
+	a.page.smaller, a.page.larger, span.extend, span.pages {
+  	display: none;
+		}
+} 
+/*======================================
+Post comment box
+========================================*/
+/*submit button*/
+input#submit.submit,
+#submit {
+	background:-moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	background-color:#44c767;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:10px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}   
+input#submit.submit:hover,
+#submit:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+	background:-moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:-ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+	background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+	background-color:#5cbf2a; 
+}
+input#submit.submit:active,
+#submit:active { 
+	position:relative;
+	top:1px;
+}
+span.says {
+	display: none;
+}
+.comment-list .even  { 
+	background-color:	#E8EFE8; 
+} 
+.comment-list .odd  {
+	background-color:#BED6B2;
+}
+.comment .depth-2{
+    margin-left:40px;
+}
+.comment-author .comment-meta img {
+	border-radius: 50%;
+    border: 3px solid white;
+}
+.reply:hover a {
+	color: #fff;
+}
+/*
+#cancel-comment-reply-link {
+	font-size: 14px;
+	background-color: #777;
+	color: #fff;	
+	border:1px solid #55737D;
+	border-radius:3px;
+	padding:3px;
+	width:50px;
+	box-shadow: 1px 1px 2px 2px #4f4f4f;
+	text-decoration:none;
+	margin: 6px;
+}
+*/
+/*
+#cancel-comment-reply-link:hover {
+	background-color: #fff;
+	color: #000;	
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+*/
+@media screen and (max-width: 992px) {
+	.comment-rating {
+		font-size: 10px;
+} 
+}
+p.comment-form-cookies-consent { display: none; }
+/*======================================
+search.php
+========================================*/
+.search-highlight {
+	background:#FFFF00;
+	color:blue;
+	padding-left: 6px;
+	padding-right: 6px;
+	border-radius: 5px;
+}
+button.search-submit {
+	outline: none;
+}
+.tint {
+    z-index: 1;
+ 		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background: rgba(255, 255, 255, 0.7)!important;    
+}
+.layer {
+    background-color: rgba(248, 247, 216, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*========================================
+sidebar footer widget
+========================================*/
+div.cat-section {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+div.cat-section > * {
+  padding: 0;
+  margin: 0;
+}
+div.cat-section span {
+  flex: 1;
+  border-bottom: 2px dotted #333;
+}
+/*======================================
+footer.php
+========================================*/
+#menu-extra-2-menu li,
+#menu-footer-navigation li {
+	display: block;
+}
+/*======================================
+WooCommerce - Post tab
+========================================*/
+._woocommerce_spicy_level_field {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+ul.wc-radios {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+ul.wc-radios li {
+		display: inline;
+	}
+/*======================================
+WooCommerce - Shop page
+========================================*/
+/*pagination*/
+.woocommerce nav.woocommerce-pagination ul li {
+	border-right: 4px solid #fff;
+	background: white !important;
+}
+.page-numbers {
+	border: none !important;
+}
+.woocommerce-pagination .page-numbers a:link, 
+.woocommerce-pagination .page-numbers a:visited {
+	border-radius: 6px;
+	display: block !important;
+	background-color: #fff !important;
+	color: #000 !important;
+	padding: 10px 14px !important;
+}
+.woocommerce-pagination .page-numbers .current, 
+.woocommerce-pagination .page-numbers li a:hover {
+	border-radius: 6px;
+	padding: 10px 14px !important;
+	background: #77A464 !important;
+	color: #fff !important;
+}
+/*order by - default sorting box*/
+select.orderby {
+	padding: 12px;
+	background-color: #77A464;
+	color: #ffffff; 
+	font-weight: bold; 
+	border-radius: 6px;
+}
+/*woocommerce breadcrumb*/
+.woocommerce .woocommerce-breadcrumb {
+	font-size: 1.5em;
+}
+/*hide woof sorting option when filtering*/
+div.woof_products_top_panel {
+	display: none!important; 
+}
+/*quantity box width - add quantity in functions.php*/
+.input-text.qty {
+	width: 68px;
+	border-radius: 6px;
+	padding: 6px;
+}
+/*featured flash - featured flash */
+.featured-delivery {
+	position: absolute;
+	left: -5px;
+	top: -10px;	
+}
+/*show in one column in mobile*/
+.woocommerce ul.products li.product a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 0 1em;
+    box-shadow: 6px 6px 8px 1px #000000 0.48;
+    border-radius: 10px;
+}
+/*======================================
+front-page.php
+========================================*/
+div#front-page-slide-ow.tns-outer {
+	position: relative;
+}
+.tns-controls button {
+	position: absolute;
+	bottom: 50%;
+  z-index: 10;
+  background: #000;
+  cursor: pointer;
+  color: #fff;
+}
+.tns-controls button:first-child {
+	left: 0;
+}
+.tns-controls button:last-child {
+	right: 0;
+}
+.tns-nav {
+	display: none;
+}
+
+div.owl-stage-out {
+	position: relative;
+}
+.owl-prev i,
+.owl-next i {
+	position: absolute;
+	top: 20%; 
+  cursor: pointer; 
+}
+.owl-prev i {
+	left: -25px;
+}
+.owl-next i {   
+  right: -25px;
+}
+.bg-transparent-50 {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*======================================
+WooCommerce - My Account page
+========================================*/
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+    /* float: left; */
+  margin-left: 2em;
+	border-radius: 5px;
+}
+.woocommerce form .form-row input.input-text, 
+.woocommerce form .form-row textarea,
+select#find_where {
+	width: 100%!important;
+	margin: 0;
+	outline: 0;
+	line-height: 2rem;
+	padding: 6px;
+	border: none;
+	border-bottom: 1px #000 solid;
+	border-radius: 5px;
+}
+.woocommerce form .form-row input.input-text:focus, 
+.woocommerce form .form-row textarea:focus, 
+.woocommerce form .form-row input.input-text:hover, 
+.woocommerce form .form-row textarea:hover {
+	border-bottom: green solid 3px;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+/*my account*/
+.col2-set .col-1,
+.col2-set .col-2,
+.col-2, 
+.col-1 {
+	max-width: 100%!important;
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--gift1 a::before{
+	font-family: 'Font Awesome 5 Brands'; 
+	font-weight: 900;
+	margin-right: 28px;
+  content: "\f3b5";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--dashboard a::before{
+	font-family: "Font Awesome 5 Brands"; 
+	font-weight: 900; 
+	content: "\f837";
+	margin-right: 28px;
+  
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--edit-address a::before{
+	font-family: 'Font Awesome 5 Brands'; 
+	font-weight: 900;
+	margin-right: 28px;
+  content: "\f3b5";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--payment-methods a::before{
+	font-family: 'Font Awesome 5 Brands';
+	margin-right: 28px;
+  content: "\f18c";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--orders a:before{
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 900;
+	margin-right: 28px;
+  content: "\f3ee";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--downloads a:before{
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 900;
+	margin-right: 28px;
+  content: "\f18c";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--edit-account a::before{
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 900;
+	margin-right: 28px;
+  content: "\f3c6";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--customer-logout a::before{
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 900;
+	margin-right: 28px;
+  content: "\f417";	
+}
+body.woocommerce-account ul li.woocommerce-MyAccount-navigation-link--log-history a::before{
+	font-family: 'Font Awesome 5 Brands';
+	font-weight: 900;
+	margin-right: 28px;
+	content: "\f425";
+}
+/*
+@media screen and (max-width: 992px) {
+	.cross-sells ul.products li.product, 
+	.up-sells ul.products li.product {
+    width: 100%!important;
+}
+}
+*/
+/*
+textarea#order_comments {
+  width: 100%;
+  height: 150px;
+}
+span.woocommerce-input-wrapper {
+    flex:1;
+}
+*/
+nav.woocommerce-MyAccount-navigation {
+	background-color: lightgray; 
+	margin-right: 13px;
+}
+li.woocommerce-MyAccount-navigation-link {
+	padding: 9px 16px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+li.woocommerce-MyAccount-navigation-link.is-active {
+	background-color: #89da59;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;	
+}
+li.woocommerce-MyAccount-navigation-link.is-active a{
+	color: white;
+}
+div.woocommerce-Tabs-panel p {
+	text-align: justify;
+}
+.woocommerce_options_panel .wc-radios label, .woocommerce_options_panel legend {
+    float: left;
+    width: 150px;
+    padding: 0;
+    margin: 12px!important;
+}
+div#respond {
+padding: 12px; }
