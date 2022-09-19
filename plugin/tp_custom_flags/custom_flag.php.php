@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: TranslatePress Change Flag
+ * Plugin Name: Change Flag
  * Plugin URI: https://cathy-zhang.ca
  * Description: Change the flag for language in TranslatePress
  * Version: 1.1
@@ -9,7 +9,7 @@
  * License: GPL2
  */
  
-/*  Copyright 2020  Cathy Zhang  (email : zhangtingyu123@gmail.com)
+/*  Copyright 2020  Cathy Zhang  (email : xiaoyuzhang668@gmail.com)
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
     published by the Free Software Foundation.
