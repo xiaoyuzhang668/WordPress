@@ -1,0 +1,114 @@
+/*TABLE OF CONTENT
+1. import google fonts
+2. common setting
+3. customize navbar
+4. customize carousel
+5. responsive css on navbar
+
+/*----------------------------------------
+1. import google fonts
+------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Domine|Roboto:400,500,700&display=swap');
+
+/*----------------------------------------
+2. common setting
+------------------------------------------*/
+body { 
+  color: #5a5a5a;
+  font-family: 'Roboto', 'Arial', sans-serif; 
+  margin: 38px auto;
+  text-align: center;
+  line-height: 3rem;
+  max-width: 50rem;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: 'Domine', 'Times New Roman', serif;
+}
+
+/*----------------------------------------
+3. count up to 404
+------------------------------------------*/
+.count-center {
+  text-align: center;
+  height: 200px;
+  margin-bottom: 38px;
+}
+
+.counter {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FF6F6F;
+  width: 200px;  
+  line-height: 200px;
+  color: #fff;
+  font-size:50px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/*----------------------------------------
+4. format
+------------------------------------------*/
+.highlight {
+  font-weight: bold;
+}
+
+.margin-b, .text{
+  margin-bottom: 38px;
+}
+
+img {
+  max-width: 200px;
+  height: auto;
+}
+
+/*----------------------------------------
+5. home page link behaviour
+------------------------------------------*/
+h3 a {
+  padding: 10px;
+  border-radius: 6px;
+}
+
+h3 a:link,
+h3 a:visited {
+  background-color: #82a6e2;
+  color: #fff;
+  text-decoration: none;
+}
+
+h3 a:hover,
+h3 a:active {
+  background-color: #d95703;
+}
+
+/*======================================
+6. css for responsive layout
+========================================*/
+/*define breakpoint at 35rem*/
+@media only screen and (min-width: 35rem){  
+    /*define font size when in desktop view*/
+    body {
+      line-height: 3.5rem;
+       font-size: 1.5rem;
+    }
+
+     /*form text fields display when in desktop view*/
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 10px;
+      }
+
+    .grid-item {
+        padding: 20px;
+        text-align: center;
+      }
+}
+
+
